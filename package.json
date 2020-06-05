@@ -7,7 +7,21 @@
   },
   "main": "index.js",
   "scripts": {
-  	"start": "node index.js"
-  }
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "eslint": "^7.1.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BradenGoodwin/MinistryAlerts.git"
+  },
+  "author": "Braden Goodwin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BradenGoodwin/MinistryAlerts/issues"
+  },
+  "homepage": "https://github.com/BradenGoodwin/MinistryAlerts#readme"
 }
-
