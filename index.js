@@ -22,4 +22,5 @@ client.on('message', message => {
   }
 });
 
-client.login('NzE4MjU3MDczOTg0MzcyNzM3.XtmRrw.k9XGKeFQ9rKh4SoxD317qi8HiJw');
+//client.login('NzE4MjU3MDczOTg0MzcyNzM3.XtmRrw.k9XGKeFQ9rKh4SoxD317qi8HiJw');
+client.login(process.env.BOT_TOKEN);
