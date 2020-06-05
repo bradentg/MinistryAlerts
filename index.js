@@ -1,5 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const server = require('express').createServer();
+
+server.listen(process.env.PORT || 3000, function() {
+  console.log("listening on 3000");
+});
 
 
 client.once('ready', () => {
