@@ -8,10 +8,6 @@ app.listen(PORT, () => {
     console.log(`Our app is running on port ${ PORT }`);
 });
 
-server.listen(process.env.PORT || 3000, function() {
-  console.log("listening on 3000");
-});
-
 
 client.once('ready', () => {
   console.log('Ready!');
