@@ -1,0 +1,9 @@
+{
+  "name": "ministry-alerts",
+  "description": "ministry-alerts",
+  "version": "1.0.0",
+  "engines": {
+    "node": "12.x"
+  }
+}
+
