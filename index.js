@@ -1,6 +1,12 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const server = require('express').createServer();
+const express = require('express');
+const app = express();
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
 
 server.listen(process.env.PORT || 3000, function() {
   console.log("listening on 3000");
