@@ -26,7 +26,14 @@ client.on('message', message => {
       member = message.guild.member(message.author);
     }
 
-    message.channel.send(`Greetings citizen No. ${message.author.id} (${member.nickname}).\nMay the Bean bless you, may the Ministry guide you, may the Emperor protect you.`);
+    let name;
+    if (member.nickname != null){
+      name = member.nickname;
+    } else {
+      name = message.author.username;
+    }
+
+    message.channel.send(`Greetings citizen No. ${message.author.id} (${name}).\nMay the Bean bless you, may the Ministry guide you, may the Emperor protect you.`);
   }
 });
 
