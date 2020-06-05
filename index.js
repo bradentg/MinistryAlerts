@@ -15,7 +15,6 @@ client.on('message', message => {
   if (message.content === '!test') {
     message.channel.send('This is a test. Do not be alarmed. Please carry on.');
   } else if (message.content === '!hello') {
-    //guild = message.guild;
     console.log(message.guild.name);
     let guild = message.guild;
     let member;
@@ -27,5 +26,4 @@ client.on('message', message => {
   }
 });
 
-//client.login('NzE4MjU3MDczOTg0MzcyNzM3.XtmRrw.k9XGKeFQ9rKh4SoxD317qi8HiJw');
 client.login(process.env.BOT_TOKEN);
