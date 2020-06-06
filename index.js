@@ -40,6 +40,8 @@ client.on('message', message => {
     message.channel.send('beanland.apexmc.co [Brought to you by the Ministry of Domains]');
   } else if (message.content === '!map') {
     message.channel.send('A map of the known Beanland can be found here: http://147.135.31.32:9653/ \nBrought to you by the Ministry of Cartography in partnership with the Ministry of Domains.');
+  } else if (message.content === '!botinfo') {
+    message.channel.send('This bot is a proprietary alert system brought to you by the Ministerial Broadcasting Service, a department of Ministry Telecom.');
   }
 });
 
