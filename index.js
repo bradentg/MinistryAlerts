@@ -34,6 +34,8 @@ client.on('message', message => {
     }
 
     message.channel.send(`Greetings citizen No. ${message.author.id} (${name}).\nMay the Bean bless you, may the Ministry guide you, may the Emperor protect you.`);
+  } else if (message.content === '!wiki') {
+    message.channel.send('The Ministry\'s comprehensive guide to Beanish lore can be found here: https://beanland.fandom.com/wiki/The_Beanland_Wiki \nBrought to you by the Ministry of Archives.');
   }
 });
 
