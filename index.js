@@ -51,12 +51,14 @@ client.on('message', message => {
 		message.channel.send('This bot is a proprietary alert system brought to you by the Ministerial Broadcasting Service, a department of Ministry Telecom.');
 	}
 	else if (message.content === `${prefix}server`) {
-		message.channel.send(`This server's name is: ${message.guild.name}`);
+		message.channel.send(`Server name: ${message.guild.name}\nTotal members: ${message.guild.memberCount}`);
 	}
 	else if (message.content === `${prefix}ping`) {
 		message.channel.send('Pong');
 	}
-
+	else if (message.content === `${prefix}birth`) {
+		message.channel.send(`And on the date ${message.guild.createdAt}, Year of our Bean, He fashioned this server in his own image, and He saw that it was good.`);
+	}
 });
 
 client.login(token);
