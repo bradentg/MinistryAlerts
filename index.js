@@ -71,7 +71,7 @@ client.on('message', message => {
 	else if (message.author.id === '151071288138530816') {
 		if (message.content.startsWith(`${prefix}testannounce`)) {
 			const announcement = message.content.slice(9).trim();
-			client.channels.cache.get('ministry-diagnostics').send(announcement);
+			client.channels.cache.get('718261746858721363').send(announcement);
 		}
 	}
 
