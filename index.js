@@ -17,6 +17,11 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
+	if (!message.content.startsWith(prefix) || message.author.bot) return;
+
+	// const args = message.content.slice(prefix.length).split(/ +/);
+	// const command = args.shift().toLowerCase();
+
 	if (message.content === `${prefix}test`) {
 		message.channel.send('This is a test. Do not be alarmed. Please carry on.');
 	}
@@ -58,6 +63,9 @@ client.on('message', message => {
 	}
 	else if (message.content === `${prefix}birth`) {
 		message.channel.send(`And on the date ${message.guild.createdAt}, Year of our Bean, He fashioned this server in his own image, and He saw that it was good.`);
+	}
+	else if (message.content === `${prefix}lunchbreak`) {
+		message.channel.send('My Bot\'s message', { files: ['https://i.ytimg.com/vi/YGc6Cwj27Pk/hqdefault.jpg'] });
 	}
 });
 
