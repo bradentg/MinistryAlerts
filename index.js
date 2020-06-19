@@ -1,6 +1,6 @@
 const { prefix } = require('./config.json');
 const Discord = require('discord.js');
-const client = new Discord.Client({ disableEveryone: False });
+const client = new Discord.Client();
 const express = require('express');
 const app = express();
 
