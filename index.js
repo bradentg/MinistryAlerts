@@ -68,10 +68,14 @@ client.on('message', message => {
 		message.channel.send('https://i.ytimg.com/vi/YGc6Cwj27Pk/hqdefault.jpg');
 	}
 	// admin only
-	else if (message.author.id === '151071288138530816') {
+	else if (message.author.id === '151071288138530816' || message.author.id === '202972704305971210') {
 		if (message.content.startsWith(`${prefix}testannounce`)) {
-			const announcement = message.content.slice(9).trim();
+			const announcement = message.content.slice(13).trim();
 			client.channels.cache.get('718261746858721363').send(announcement);
+		}
+		else if (message.content.startsWith(`${prefix}announce`)) {
+			const announcement = message.content.slice(9).trim();
+			client.channels.cache.get('555569923288465420').send(announcement);
 		}
 	}
 
