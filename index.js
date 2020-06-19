@@ -68,7 +68,7 @@ client.on('message', message => {
 		message.channel.send('https://i.ytimg.com/vi/YGc6Cwj27Pk/hqdefault.jpg');
 	}
 	// admin only
-	else if (message.author.id === 151071288138530816) {
+	else if (message.author.id === '151071288138530816') {
 		if (message.content.startsWith(`${prefix}testannounce`)) {
 			const announcement = message.content.slice(9).trim();
 			client.channels.cache.get('ministry-diagnostics').send(announcement);
