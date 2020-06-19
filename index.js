@@ -65,7 +65,7 @@ client.on('message', message => {
 		message.channel.send(`And on the date ${message.guild.createdAt}, Year of our Bean, He fashioned this server in his own image, and He saw that it was good.`);
 	}
 	else if (message.content === `${prefix}lunchbreak`) {
-		message.channel.send('My Bot\'s message', { files: ['https://i.ytimg.com/vi/YGc6Cwj27Pk/hqdefault.jpg'] });
+		message.channel.send('https://i.ytimg.com/vi/YGc6Cwj27Pk/hqdefault.jpg');
 	}
 });
 
