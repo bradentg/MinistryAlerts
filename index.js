@@ -77,6 +77,10 @@ client.on('message', message => {
 			const announcement = message.content.slice(9).trim();
 			client.channels.cache.get('555569923288465420').send(announcement);
 		}
+		else if (message.content.startsWith(`${prefix}announceall`)) {
+			const announcement = message.content.slice(12).trim();
+			client.channels.cache.get('555569923288465420').send(`@everyone ${announcement}`);
+		}
 	}
 
 });
