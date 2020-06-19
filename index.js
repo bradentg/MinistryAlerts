@@ -20,7 +20,7 @@ client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
 
 	// const args = message.content.slice(prefix.length).split(/ +/);
-	// const command = args.shift().toLowerCase();
+	// const command = args.shift().toLowerCase().trim();
 
 	if (message.content === `${prefix}test`) {
 		message.channel.send('This is a test. Do not be alarmed. Please carry on.');
@@ -67,6 +67,14 @@ client.on('message', message => {
 	else if (message.content === `${prefix}lunchbreak`) {
 		message.channel.send('https://i.ytimg.com/vi/YGc6Cwj27Pk/hqdefault.jpg');
 	}
+	// admin only
+	else if (message.author.id === 151071288138530816) {
+		if (message.content.startsWith(`${prefix}testannounce`)) {
+			const announcement = message.content.slice(9).trim();
+			client.channels.cache.get('ministry-diagnostics').send(announcement);
+		}
+	}
+
 });
 
 client.login(process.env.BOT_TOKEN);
