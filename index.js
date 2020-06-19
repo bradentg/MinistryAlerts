@@ -1,6 +1,6 @@
 const { prefix } = require('./config.json');
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const client = new Discord.Client({ disableEveryone: False });
 const express = require('express');
 const app = express();
 
@@ -73,13 +73,13 @@ client.on('message', message => {
 			const announcement = message.content.slice(13).trim();
 			client.channels.cache.get('718261746858721363').send(announcement);
 		}
+		else if (message.content.startsWith(`${prefix}announceall`)) {
+			const announcement = message.content.slice(12).trim();
+			client.channels.cache.get('718261746858721363').send('<@everyone>' + ' ' + announcement);
+		}
 		else if (message.content.startsWith(`${prefix}announce`)) {
 			const announcement = message.content.slice(9).trim();
 			client.channels.cache.get('555569923288465420').send(announcement);
-		}
-		else if (message.content.startsWith(`${prefix}announceall`)) {
-			const announcement = message.content.slice(12).trim();
-			client.channels.cache.get('555569923288465420').send(`@everyone ${announcement}`);
 		}
 	}
 
