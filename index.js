@@ -67,6 +67,9 @@ client.on('message', message => {
 	else if (message.content === `${prefix}lunchbreak`) {
 		message.channel.send('https://i.ytimg.com/vi/YGc6Cwj27Pk/hqdefault.jpg');
 	}
+	else if (message.content.toLowerCase().includes('bean')) {
+		message.react(':regional_indicator_b: :regional_indicator_e: :regional_indicator_a: :regional_indicator_n:');
+	}
 	// admin only
 	else if (message.author.id === '151071288138530816' || message.author.id === '202972704305971210') {
 		if (message.content.startsWith(`${prefix}testannounce`)) {
