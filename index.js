@@ -1,4 +1,5 @@
 const { prefix } = require('./config.json');
+const { bottoken } = require('./bot-token.json');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const express = require('express');
@@ -17,7 +18,7 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-	if (!message.content.startsWith(prefix) || message.author.bot) return;
+	if (message.author.bot) return;
 
 	// const args = message.content.slice(prefix.length).split(/ +/);
 	// const command = args.shift().toLowerCase().trim();
@@ -68,7 +69,11 @@ client.on('message', message => {
 		message.channel.send('https://i.ytimg.com/vi/YGc6Cwj27Pk/hqdefault.jpg');
 	}
 	else if (message.content.toLowerCase().includes('bean')) {
-		message.react(':regional_indicator_b: :regional_indicator_e: :regional_indicator_a: :regional_indicator_n:');
+		console.log('bean');
+		message.react('🅱️');
+		message.react('🇪');
+		message.react('🅰️');
+		message.react('🇳');
 	}
 	// admin only
 	else if (message.author.id === '151071288138530816' || message.author.id === '202972704305971210') {
@@ -88,4 +93,4 @@ client.on('message', message => {
 
 });
 
-client.login(process.env.BOT_TOKEN);
+client.login(bottoken);
