@@ -70,10 +70,10 @@ client.on('message', message => {
 	}
 	else if (message.content.toLowerCase().includes('bean')) {
 		console.log('bean');
-		message.react('🅱️');
-		message.react('🇪');
-		message.react('🅰️');
-		message.react('🇳');
+		message.react('🅱️').then(console.log).catch(console.error);
+		message.react('🇪').then(console.log).catch(console.error);
+		message.react('🅰️').then(console.log).catch(console.error);
+		message.react('🇳').then(console.log).catch(console.error);
 	}
 	// admin only
 	else if (message.author.id === '151071288138530816' || message.author.id === '202972704305971210') {
@@ -93,4 +93,4 @@ client.on('message', message => {
 
 });
 
-client.login(bottoken);
+client.login(process.env.BOT_TOKEN);
