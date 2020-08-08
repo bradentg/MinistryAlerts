@@ -16,6 +16,8 @@ client.once('ready', () => {
 	console.log('Ready!');
 });
 
+// TODO: Implement command handling so it's not just an endless chain of else ifs
+
 client.on('message', message => {
 	if (message.author.bot) return;
 
