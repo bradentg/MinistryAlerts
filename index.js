@@ -49,7 +49,7 @@ client.on('message', message => {
 		message.channel.send('The Ministry\'s comprehensive guide to Beanish lore can be found here: https://beanland.fandom.com/wiki/The_Beanland_Wiki \nBrought to you by the Ministry of Archives.');
 	}
 	else if (message.content === `${prefix}ip`) {
-		message.channel.send('beanland.apexmc.co [Brought to you by the Ministry of Domains]');
+		message.channel.send('returnoftheking.mcserver.us [Brought to you by the Ministry of Domains]');
 	}
 	else if (message.content === `${prefix}map`) {
 		message.channel.send('A map of the known Beanland can be found here: http://147.135.31.32:9653/ \nBrought to you by the Ministry of Cartography in partnership with the Ministry of Domains.');
